@@ -1,0 +1,17 @@
+#Programa desenvolvido em Python
+#Fazer um algoritmo que:
+#Leia um número indeterminado de linhas contendo cada uma a idade de um individuo
+#a ultima linha, que não entrara nos calculos, contem o valor da idade igual a zero.
+#Calcule e escreva a idade media deste grupo de individuos.
+
+def main():
+    cont = 0; SomaIdade = 0; Idade = 0; idadeMedia = 0# Declaração das Variaveis
+    Idade = int(input("Informe sua idade: ")) # receber a idade
+    while Idade != 0:#Condição de parada
+        cont = cont + 1 # contador de individuos
+        SomaIdade = SomaIdade + Idade #contador de idades
+        Idade = int(input("Informe sua idade: "))  # receber a idade
+    idadeMedia = SomaIdade / cont # tirar a media das idades dos individuos
+    print("A media da idade dos individuos foi de %d anos" %idadeMedia)
+if __name__ == '__main__':
+    main()
