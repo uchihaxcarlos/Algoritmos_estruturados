@@ -1,3 +1,3 @@
 # Algoritmos_estruturados
-#Algoritmos Estruturador 3 edição
-#Exercicios resolvidos usando a linguagem pyhon.
+\nAlgoritmos Estruturador 3 edição
+\nExercicios resolvidos usando a linguagem pyhon.
