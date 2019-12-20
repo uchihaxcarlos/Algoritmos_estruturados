@@ -1,0 +1,25 @@
+#Tem-se um conjunto de dados contendo a altura e o sexo(masculino e feminino) de 50 pessoas
+#Fazer um algoritmo que calcule e escreva:
+#a maior e a menor altura do grupo;
+#a media da altura das mulheres;
+#o numero de homens
+
+def main():
+    MenorAltura = 3.0;MaiorAltura = 0.0; contadorMasculino=0.0;contadorFeminino=0.0;alturaMulheres = 0 ;mediaAlturamulheres = 0.0 #declaração de variaveis
+    for i in range(0,5):#Nesse caso foi utilizado o comando de repetição FOR pois sabemos a quantidade de individuos
+        Altura = float(input("Informe a sua altura: "))#entrada de dados da altura
+        Sexo = str(input("informe o seu Sexo: (Masculino ou Feminino)")).upper()#entrada de dados a respeito do sexo,Comando UPPER para deixar tudo maiusculo
+        if Altura > MaiorAltura:#Comando IF para pegar a maior altura digitada
+            MaiorAltura = Altura#adicionando a altura a variavel de Maior altura
+        if Altura < MenorAltura:#comando IF para pegar a menor altura digitada
+            MenorAltura = Altura#Adicionando a altura a variavel de menor altura
+        if Sexo == "FEMININO":#Condição criada para pegar todas as mulheres
+            contadorFeminino = contadorFeminino + 1#contador das mulheres
+            alturaMulheres = alturaMulheres + Altura#adicionando as alturas ao acumulador alturaMulheres
+        if Sexo == "MASCULINO":#Pegar todas a pessoas da sexo MASCULINO
+            contadorMasculino = contadorMasculino + 1 # Adicionando +1 ao contador masculino
+    mediaAlturamulheres = alturaMulheres/contadorFeminino
+    print("A media da altura das mulheres foi de %.1f"%mediaAlturamulheres)
+    print("O numero de Homens foi de %d"%contadorMasculino)
+if __name__ == '__main__':
+    main()
