@@ -1,0 +1,34 @@
+#1.12.6 Um determinado material radioativo perde metade de sua massa a cada 50 segundos.Dada a 
+#massa inicial, em gramas, fazer um algoritmo que determine o tempo necessario para que
+#essa massa se torne menor do que 0.5 gramas. escreva a massa inicial, a massa final e o
+#tempo calculado em horas,minutos e segundos
+
+def main():
+    #declaração de variaveis#
+    MassaInicial = 0.0;MassaFinal = 0.0;Massa=0.0; Tempo = 50 ;Horas=0;Minutos=0;Segundos=0; 
+    #fim da declaração#
+    
+    MassaInicial = float(input("Informe a massa inicial: "))#Entrada da massa
+    Massa = MassaInicial#como devemos preservar a massa inicial criamos outras variavel para receber
+    while Massa >= 0.5:#condição de parada
+        Tempo = Tempo + 50#adição do tempo necessario para perder metade da vida
+        Massa = Massa / 2#perda da metade da massa
+    MassaFinal = Massa#Massa final recebendo a massa, não é necessario criar outra variavel mas
+    #criei para dar outro nome
+    
+    #Separar o tempo em Horas,Minutos e segundos.
+    #O que é 1 minuto ? 60 segundos
+    #o que é 1 hora? 3600 minutos
+    
+    
+    while Tempo >= 3600:#referente a 1 horas em segundos
+        Horas = Horas + 1#adição da hora
+        Tempo = Tempo - 60#retirada dos segundos
+        
+    while Tempo > 60:#referente a 1 minuto em segundos
+        Minutos = Minutos + 1#adição do minuto
+        Tempo = Tempo - 60
+    Segundos = Tempo
+    print("A Massa Inicial era %.2f a Massa final foi de %.2f e o tempo foi de %d:%d:%d"%(MassaInicial,MassaFinal,Horas,Minutos,Segundos))
+    
+main()
