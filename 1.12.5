@@ -1,0 +1,19 @@
+#1.12.5 Supondo que a população de um pais A seja da ordem de 90.000.000 de habitantes
+#com uma taxa anual de crescimento de 3% e que a população de uma pais B seja, aproximadamente
+#de 200.000.000 de habitantes com uma taxa anual de crescimento de 1,5%, fazer um algoritmo
+#que calcule e escreva o numero de anos necessarios para que a população do pais A ultrapasse
+#ou iguale a população do pais B, mantidas essas taxas de crescimento.
+
+def main():
+    #Declaração das variaveis##
+    paisA = 90000000; paisB = 200000000; CrescimentoA = 0.03; CrescimentoB = 0.015
+    Anos = 0
+    #Fim da declaração das variaveis#
+    
+    while paisB > paisA:#condição de parada quando o pais B for maior que o A
+        paisA = ((paisA*CrescimentoA)) + paisA#crescimento populacional
+        paisB = ((paisB*CrescimentoB)) + paisB#crescimento populacional
+        Anos = Anos + 1#contador dos anos
+    print(Anos)#print da quantidade de anos
+    
+main()
