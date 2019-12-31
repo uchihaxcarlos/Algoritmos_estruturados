@@ -1,0 +1,30 @@
+#1.12.68 Fazer um algoritmo que:
+#leia um conjunto de linhas contendo, cada uma, um numero inteiro, na base 10, de ate cinco digitos.
+#a ultima linha contem o valor zero;
+#Transforme esse numero da base 10 na base 2;
+#Escreva o numero na base 10 e na base 2
+def main():
+    ### INTERPRETAÇÃO DA QUESTAO ###
+    # Para converter os numero de decimal para binario é necessario fazer divisões por 2
+    # porem temos que guardar o valor da divisão ou nao divisão em um lugar nesse caso
+    # sera em uma variavel inteira
+    
+    ### COMO ADICIONAR OS BINARIOS EM ORDEM NA VARIAVEL ? ####
+
+    #Multiplicando por 10 toda hora fazendo um acumulador
+    
+    ### Como pegar so numeros que dividem por 2?
+    #fazer um if que so entra la caso de int na divisão
+    
+    ### Declaração das variaveis ###
+    Binario = 0; Numero = 0; Acumulador=1;NumeroInicial = 0
+    ### FIM DA DECLARAÇÃO #########    
+    Numero = int(input("Informe o numero inteiro para ser convertido: "))
+    NumeroInicial = Numero
+    while Numero > 0:
+        if Numero / 2 != Numero // 2:
+            Binario = Binario + 1*Acumulador
+        Numero = Numero // 2
+        Acumulador = Acumulador * 10
+    print("O numero em deciamal era %d e em binario ficou %d."%(NumeroInicial,Binario))
+main()
