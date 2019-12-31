@@ -1,0 +1,36 @@
+#1.12.7 Deseja-se fazer um levantamento a respeito da ausência de alunos a primeira prova de programação
+#de computadores para cada uma das 14 turmas existentes. Para cada turma, é fornecido um conjunto de
+#valores, sendo que os dois primeiros valores do conjunto correspondem a identificação da turma (A, ou B,ou C ...)
+#e ao numero de alunos matriculados, e os demais valores deste conunto contem o numero de matriculas do aluno e a
+#Letra A ou P para o caso de o aluno estar ausente ou presente, respectivamente. Fazendo um algoritmo que:
+#para cada turma,calcule a porcentagem de ausencia e escreva a identificação da turma e a porcentagem calculada.
+#determine e escreva quantas turmas tiveram porcentagem de ausencia superior a 5%
+
+def main():
+    #dados informados pelo problema
+    #temos 14 turmas, e estas turmas são identificadas pelas letras do alfabeto
+    #devemos informar quantos alunos tem em cada turma
+    #Ele deseja que entremos com a matricula do aluno e se esta presente ou nao A ou P
+    #Para cada turma devemos calcular a porcentagem de alunos ausentes e escrever a identificação da turma
+    #Quantas turmas tiveram ausencia superior a 5%?
+    
+    ######   Identificação das variaveis     ######
+    IdentificacaoTurma = " " ; QuantAlunos = 0 ; MatAluno = 0 ; Presenca = " ";
+    QuantTurma = 14 ; cont = 0;ContTurmas = 0
+    ###### FIM DA IDENTIFICAÇÃO DAS VARIAVEIS #####
+    
+    for i in range(QuantTurma):#For com tamanho da turma
+        IdentificacaoTurma = str(input("Codigo de identificação da turma:  "))#entrada de dados
+        QuantAlunos = int(input("Quantidade de alunos da turma: "))#entrada de dados
+        for j in range(QuantAlunos):#for para a quantidade de alunos da respectiva turma
+            MatAluno = str(input("Matricula do aluno: "))#entrada de dados
+            Presenca = str(input("Digite [A] para ausente e [P] para Presente:  ")).upper()#entrada de dados
+            if Presenca == "A":#contador das ausencias
+                cont = cont + 1#adicionando mais 1 ao contador
+        Porcentagem = (cont / QuantAlunos)*100#calculo da porcentagem
+        if Porcentagem >= 5:#se a porcentagem for maior ou igual a 5%
+            ContTurmas = ContTurmas + 1#contador das turmas com a porcetagem maior que 5%
+        print("Nesta Turma %d %% dos alunos Faltaram."%Porcentagem)#Mostrar na tela
+        cont = 0#zerar o contador das turmas apos mostrar para que uma nova contagem se inicie
+    print("De todas as turmas %d tiveram ausencia superior acima de 5%%"%ContTurmas)#print final
+main()
