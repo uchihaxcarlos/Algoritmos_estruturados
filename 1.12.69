@@ -1,0 +1,16 @@
+#1.12.69 Fazer um algoritmo que:
+#leia um conjunto de linhas contendo, cada uma, um numero inteiro na base 3. A ultima linha
+#contem o valor zero.
+#transforme esse numero na base 3 para a base 10
+#escreva o numero na base 3 e na base 10
+
+def main():
+    Quantidade = 1 ; Potencia = 3; Elevado = 1
+    #### Entrada de dados ###
+    while Quantidade != 0: 
+        Quantidade = int(input("Informe a potencia: "))
+        for i in range(Quantidade):
+            Elevado = Elevado * Potencia
+        print(Elevado)
+        Elevado = 1
+main()
